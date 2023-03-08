@@ -1,0 +1,64 @@
+/*.button {*/
+/*    background-color: cornflowerblue;*/
+/*    border-radius:  8px;*/
+/*    border: 2px solid fuchsia;*/
+/*    color: white;*/
+/*    padding: 15px 32px;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*    display: inline-block;*/
+/*    font-size: 16px;*/
+/*    margin: 4px 2px;*/
+/*    cursor: pointer;*/
+/*    -webkit-transition-duration: 0.4s;*/
+/*    transition-duration: 0.4s;*/
+/*}*/
+.div {
+    text-align: center;
+}
+.button1 {
+    background-color: green;
+    color: black;
+    border: 2px solid #4CAF50;
+    border-radius:  8px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    box-shadow: 10px 5px 5px green;
+
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 10px 5px 5px red;
+}
+.button1::before {
+    content: attr(text-i);
+}
+.button1:hover::before {
+    content: attr(hover-text);
+}
+.button1:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 100%;
+    padding-left: 150%;
+    margin-left: 20px !important;
+    margin-top: 120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+.button1:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
